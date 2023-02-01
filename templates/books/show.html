@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %}
+<div class="single-book">
+	<h3 class="single-title">{{show_book.title}}</h3>
+	<h4>{{show_book.author}}</h4>
+	<h4>{{show_book.genre}}</h4>
+	<form
+		class="delete-form"
+		action="/books/{{show_book.id}}/delete"
+		method="POST"
+	>
+		<h4 class="delete-q">Delete book from list?</h4>
+		<button class="delete-button"><i class="fa-solid fa-xmark"></i></button>
+	</form>
+</div>
+{% endblock %}
