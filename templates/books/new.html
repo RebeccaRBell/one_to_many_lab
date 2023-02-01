@@ -1,12 +1,12 @@
 {% extends "base.html" %} {% block content %}
-<form action="/books" method="post">
+<form class="new-book" action="/books" method="post">
 	<div>
 		<label for="title">Title:</label>
 		<input
 			type="text"
-			id="description"
+			id="title"
 			name="title"
-			placeholder="Description"
+			placeholder="Title"
 			required
 			autofocus
 		/>

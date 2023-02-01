@@ -32,8 +32,9 @@ def create_book():
 
 @book_blueprint.route("/books/<id>", methods=["GET"])
 def show_book(id):
+    authors = author_repository.select_all()
     book = book_repository.select(id)
-    return render_template("books/show.html", show_book=book)
+    return render_template("books/show.html", show_book=book, authors=authors)
 
 
 @book_blueprint.route("/books/<id>/delete", methods=["POST"])
